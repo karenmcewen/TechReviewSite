@@ -15,7 +15,7 @@ namespace TechReviewSite.Models
 
         [Key]
         public int ID { get; set; } //this is the primary key for the Review Model
-        public string Author { get; set; } //additional property - not going to create a model at this time
+        public string Reviewer { get; set; } //additional property - not going to create a model at this time
         public string Title { get; set; } 
         public string Content { get; set; } 
         [DisplayName("Rate from 1 to 5 stars")]
