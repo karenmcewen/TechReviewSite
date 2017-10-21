@@ -133,6 +133,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710200017166_InitialCreate.cs" />
+    <Compile Include="Migrations\201710200017166_InitialCreate.Designer.cs">
+      <DependentUpon>201710200017166_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710212240185_initial.cs" />
+    <Compile Include="Migrations\201710212240185_initial.Designer.cs">
+      <DependentUpon>201710212240185_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710212242584_taketwo.cs" />
+    <Compile Include="Migrations\201710212242584_taketwo.Designer.cs">
+      <DependentUpon>201710212242584_taketwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710212252067_ThirdTimesACharm.cs" />
+    <Compile Include="Migrations\201710212252067_ThirdTimesACharm.Designer.cs">
+      <DependentUpon>201710212252067_ThirdTimesACharm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\TechReviewSiteContext.cs" />
@@ -209,6 +226,20 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710200017166_InitialCreate.resx">
+      <DependentUpon>201710200017166_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710212240185_initial.resx">
+      <DependentUpon>201710212240185_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710212242584_taketwo.resx">
+      <DependentUpon>201710212242584_taketwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710212252067_ThirdTimesACharm.resx">
+      <DependentUpon>201710212252067_ThirdTimesACharm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -14,7 +14,7 @@ namespace TechReviewSite.Models
 
         [Key]
         public int ID { get; set; } //this is the primary key for the Category Model
-        [DisplayName("Which item would you like to review?")]
+        [DisplayName("Item")]
         public string ItemName { get; set; }
 
         //example from bridge project - may not be needed here

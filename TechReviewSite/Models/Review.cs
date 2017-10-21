@@ -22,9 +22,9 @@ namespace TechReviewSite.Models
         public int NumStars { get; set; }
 
         //using two annotations!
-        [DisplayName("Enter review date MM/dd/yyyy")]
-        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
-        public DateTime PublishDate { get; set; } 
+        [DisplayName("Review Year")]
+        [DisplayFormat(DataFormatString = "{0:yyyy}")]
+        public DateTime? PublishDate { get; set; } 
 
        [ForeignKey("Category")]
        public int CategoryID { get; set; } //the CategoryID is the primary key in model Category
