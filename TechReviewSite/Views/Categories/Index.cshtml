@@ -1,33 +1,50 @@
 ﻿@model IEnumerable<TechReviewSite.Models.Category>
 
+@*This is the Index Page for the Category (Item) Model - MUST BE styled for this project*@
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Items";
 }
+<html>
+<body>
+    <!--adding an image to the header using background class "backgroundImgCategoryIndex" 
+        image and styling goes in content\Site.css
+        -->
+    <div class="backgroundImgCategoryIndex">
 
-<h2>Index</h2>
+        <h2>Current Products Available to Review</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemName)
-        </th>
-        <th></th>
-    </tr>
+        <p>
+            @Html.ActionLink("Create New Item to Review", "Create")
+        </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ItemName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+       @* This table needs to be made prettier or another style used (thumbnail)*@
 
-</table>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemName)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</body>
+</html>
+

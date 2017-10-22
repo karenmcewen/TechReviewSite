@@ -1,13 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
+@*This is the shared layout page for all pages in the website 
+on this page is the navigation bar for all pages and home page*@
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Karen McEwen Project TechReviewSite</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    @*This is the navigation bar at the top of all the screens*@
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -19,12 +24,13 @@
                 </button>
                 @Html.ActionLink("ET Phone HOME", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav"> 
                     <li>@Html.ActionLink("Current Reviews", "Index", "Reviews")</li>
                     <li>@Html.ActionLink("Write a Review", "Create", "Reviews")</li>
-                    <li>@Html.ActionLink("Current Products", "Index", "Categories")</li>
-                    <li>@Html.ActionLink("Add a Product", "Create", "Categories")</li>
+                    <li>@Html.ActionLink("Current Items", "Index", "Categories")</li>
+                    <li>@Html.ActionLink("Add an Item", "Create", "Categories")</li>
                 </ul>
             </div>
         </div>
@@ -33,7 +39,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Karen McEwen Project TechReviewSite</p>
         </footer>
     </div>
 

@@ -1,15 +1,30 @@
-﻿body {
+﻿/*Site.css is the style sheet used for updating specific elements in the project.  It will override all others*/
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+/* This creates the background image for the header on the Category Index page*/
+.backgroundImgCategoryIndex {
+   
+    background-image: url('../Images/telephone wires.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+   
+    padding-top: 100px;
+  
+    color:slateblue;
+    text-align:center;
+    font-size:x-large;    
+}
+    
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
+/* Override the default bootstrap behpx;avior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
