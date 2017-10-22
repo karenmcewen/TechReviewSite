@@ -37,7 +37,8 @@ namespace TechReviewSite.Migrations
             context.Categories.AddOrUpdate(x => x.ID,
                 new Category() { ID=1, ItemName="Communicator"},
                 new Category() { ID=2, ItemName="Babel Fish"},
-                new Category() { ID=3, ItemName="Shoe Phone"}
+                new Category() { ID=3, ItemName="Shoe Phone"},
+                new Category() { ID=4, ItemName="TARDIS Phone"}
                 );
 
             //Seeding some data into the Reviews Model
@@ -46,7 +47,7 @@ namespace TechReviewSite.Migrations
             string Title
             string Content 
             int NumStars 
-            DateTime PublishDate 
+            DateTime PublishDate - can't seem to get the format correct to seed this type of data
             */
 
             context.Reviews.AddOrUpdate(x => x.ID,
@@ -55,7 +56,7 @@ namespace TechReviewSite.Migrations
                 ID = 1, Reviewer = "Captain Kirk",                
                 Title = "Beam Me Up, Scotty!",
                 Content = "Federation issued, standard communicator. Pro:Matches my shirt. Con:Liable to interstellar interference.",
-                NumStars = 4,
+                NumStars = 4,              
                 CategoryID = 1
 
             },
@@ -65,7 +66,7 @@ namespace TechReviewSite.Migrations
                 ID = 2,
                 Reviewer = "Ford Prefect",               
                 Title = "Don't Panic!",
-                Content = "Amazing! That plaque there says its a Golgafrincham Ark Fleet Ship B Hold 7 Telephone Sanitiser Second Class, and a serial number.",
+                Content = "Amazing! That plaque there says its a Golgafrincham Ark Fleet Ship B Hold 7 Telephone Sanitiser Second Class.",
                 NumStars = 5,
                 CategoryID = 2
             },
@@ -75,12 +76,44 @@ namespace TechReviewSite.Migrations
                 ID = 3,
                 Reviewer = "Maxwell Smart",              
                 Title = "Are you thinking what I'm thinking?",
-                Content = "Oh great, I have gum on the bottom of my new shoes. ",
+                Content = "Oh great, I have gum on the bottom of my new shoes.",
                 NumStars = 2,
                 CategoryID = 3
 
-            }
+            },
 
+             new Review
+             {
+                 ID = 4,
+                 Reviewer = "The Doctor",
+                 Title = "Fantastic!",
+                 Content = "What am I suupsed to do with a ringing phone? This isn't a real phone. It's not wired up to anything!",
+                 NumStars = 5,
+                 CategoryID = 4
+
+             },
+
+              new Review
+              {
+                  ID = 5,
+                  Reviewer = "Dr. McCoy",
+                  Title = "I'm a doctor, not an engineer!",
+                  Content = "It's dead, Jim.",
+                  NumStars = 1,
+                  CategoryID = 1
+
+              },
+
+               new Review
+               {
+                   ID = 6,
+                   Reviewer = "Arthur Dent",
+                   Title = "What do you expect me to do with that?",
+                   Content = "You know, it's at times like this, when I'm trapped in a Vogon airlock with a man from Betelgeuse, and about to die of asphyxiation in deep space that I really wish I'd listened to what my mother told me when I was young.",
+                   NumStars = 3,
+                   CategoryID = 2
+
+               }
             );
 
             

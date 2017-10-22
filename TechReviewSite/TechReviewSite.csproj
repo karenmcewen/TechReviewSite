@@ -149,6 +149,18 @@
     <Compile Include="Migrations\201710212252067_ThirdTimesACharm.Designer.cs">
       <DependentUpon>201710212252067_ThirdTimesACharm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710222123398_MoreSeededData.cs" />
+    <Compile Include="Migrations\201710222123398_MoreSeededData.Designer.cs">
+      <DependentUpon>201710222123398_MoreSeededData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710222143184_MoreSeededData1.cs" />
+    <Compile Include="Migrations\201710222143184_MoreSeededData1.Designer.cs">
+      <DependentUpon>201710222143184_MoreSeededData1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710222150359_moreChangesToDatabaseValues.cs" />
+    <Compile Include="Migrations\201710222150359_moreChangesToDatabaseValues.Designer.cs">
+      <DependentUpon>201710222150359_moreChangesToDatabaseValues.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Review.cs" />
@@ -240,6 +252,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710212252067_ThirdTimesACharm.resx">
       <DependentUpon>201710212252067_ThirdTimesACharm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710222123398_MoreSeededData.resx">
+      <DependentUpon>201710222123398_MoreSeededData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710222143184_MoreSeededData1.resx">
+      <DependentUpon>201710222143184_MoreSeededData1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710222150359_moreChangesToDatabaseValues.resx">
+      <DependentUpon>201710222150359_moreChangesToDatabaseValues.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,5 +1,6 @@
 ﻿@model TechReviewSite.Models.Review
 
+
 @*This is the DETAILS Page for the REVIEWS Model - MUST be styled for this project*@
 
 @{
@@ -11,16 +12,17 @@
     <hr />
     <div class="row">
        
-            <div class="col-sm-8 col-md-6">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
                 <div class="thumbnail">
                    
                     <div class="caption">
                         <h2>@Html.DisplayFor(model => model.Title)</h2>
                         <h3>by @Html.DisplayFor(model => model.Reviewer)</h3>
                         
-                        @*the ItemName isn't showing up on this page. I don't know why*@
+                        @*the ItemName isn't showing up on this page. I don't know why
+                            does there need to be a using statement?*@
                         <p>Item: @Html.DisplayFor(model => model.Category.ItemName)</p>
-                        <p> Full Review: @Html.DisplayFor(model => model.Content)</p>
+                        <p>Full Review: @Html.DisplayFor(model => model.Content)</p>
                         <p>Review year: @Html.DisplayFor(model => model.PublishDate)</p>
                        <p>Rating: @Html.DisplayFor(model => model.NumStars) out of 5</p>
                         <p>
