@@ -33,7 +33,7 @@ Note: Your Review model should have properties to properly represent all the fie
 -What other ways can you present this information? Can you make it look like an article?
  
  Styling requirements (For the Review views ONLY. Do not style the Category views)
- -Homepage
+ +Homepage
  +Reviews Index
  -Reviews Details
 
@@ -44,7 +44,7 @@ Pages should no longer look like basic Bootstrap.
  Bootstrap Requirements
  +Navbar
 
--User should be able to navigate to the Reviews Index and Categories Index from the homepage
++User should be able to navigate to the Reviews Index and Categories Index from the homepage
  -Row(s)
 - Columns
  
@@ -53,7 +53,7 @@ Pages should no longer look like basic Bootstrap.
 -Five reviews
 
  Documentation
- -Program should be commented throughout explaining the code
+ +Program should be commented throughout explaining the code
 
 Details
 +You should have at least two models and 

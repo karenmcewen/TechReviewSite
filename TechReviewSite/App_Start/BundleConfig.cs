@@ -27,7 +27,6 @@ namespace TechReviewSite
            
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                     // "~/Content/bootstrap.css",
                       "~/Content/bootstrap-slate.css",
                       "~/Content/site.css"));
             //REMEMBER - the program loads top to bottom - site.css will overwrite Bootswatch-Slate.css

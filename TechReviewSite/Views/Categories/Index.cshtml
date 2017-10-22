@@ -3,7 +3,7 @@
 @*This is the Index Page for the Category (Item) Model - MUST BE styled for this project*@
 
 @{
-    ViewBag.Title = "Items";
+    ViewBag.Title = "Category";
 }
 <html>
 <body>
@@ -12,21 +12,11 @@
         -->
     <div class="backgroundImgCategoryIndex">
 
-        <h2>Current Products Available to Review</h2>
+        <h1>Reviewed Items</h1>             
 
-        <p>
-            @Html.ActionLink("Create New Item to Review", "Create")
-        </p>
+       @* This table is now on top of the background image*@
 
-       @* This table needs to be made prettier or another style used (thumbnail)*@
-
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.ItemName)
-                </th>
-                <th></th>
-            </tr>
+        <table class="table">            
 
             @foreach (var item in Model)
             {
@@ -36,13 +26,15 @@
                     </td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
                         @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                     </td>
                 </tr>
-            }
-
+             }
+           
         </table>
+        <h2>
+            @Html.ActionLink("Create New Item to Review", "Create")
+        </h2>
     </div>
 
 </body>

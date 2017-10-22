@@ -18,10 +18,10 @@ namespace TechReviewSite.Models
         public string Reviewer { get; set; } //additional property - not going to create a model at this time
         public string Title { get; set; } 
         public string Content { get; set; } 
-        [DisplayName("Rate from 1 to 5 stars")]
+        [DisplayName("Stars")]
         public int NumStars { get; set; }
 
-        //using two annotations!
+        //using two annotations! Using a ?next to DateTime allows the field to be void
         [DisplayName("Review Year")]
         [DisplayFormat(DataFormatString = "{0:yyyy}")]
         public DateTime? PublishDate { get; set; } 

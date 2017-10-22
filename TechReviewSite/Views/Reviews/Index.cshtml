@@ -5,15 +5,42 @@
     it MUST be styled for this project*@
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "REVIEWS";
 }
 
-<h2>Index</h2>
+<h2>Reviews of Future Technology</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Write a New Review", "Create")
 </p>
-<table class="table">
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                @*<img src="..." alt="..."> If I can find a way to input images - stretch task*@
+                <div class="caption">
+                    <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                    <h3>by @Html.DisplayFor(modelItem => item.Reviewer)</h3>
+                    <p>item: @Html.DisplayFor(modelItem => item.Category.ItemName)</p>
+
+                    <p>
+                        @Html.ActionLink("Full Review", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Category.ItemName)
@@ -50,7 +77,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Content)
         </td>
-        <td>
+        <td>         
             @Html.DisplayFor(modelItem => item.NumStars)
         </td>
         <td>
@@ -64,4 +91,4 @@
     </tr>
 }
 
-</table>
+</table>*@

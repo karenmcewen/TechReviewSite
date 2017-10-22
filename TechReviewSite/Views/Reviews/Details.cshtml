@@ -1,17 +1,41 @@
 ﻿@model TechReviewSite.Models.Review
 
-@*This is the DELETE Page for the REVIEWS Model - it does NOT need to be styled for this project*@
+@*This is the DETAILS Page for the REVIEWS Model - MUST be styled for this project*@
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Review</h4>
+<h2>Full Review</h2>
+    
     <hr />
-    <dl class="dl-horizontal">
+    <div class="row">
+       
+            <div class="col-sm-8 col-md-6">
+                <div class="thumbnail">
+                   
+                    <div class="caption">
+                        <h2>@Html.DisplayFor(model => model.Title)</h2>
+                        <h3>by @Html.DisplayFor(model => model.Reviewer)</h3>
+                        
+                        @*the ItemName isn't showing up on this page. I don't know why*@
+                        <p>Item: @Html.DisplayFor(model => model.Category.ItemName)</p>
+                        <p> Full Review: @Html.DisplayFor(model => model.Content)</p>
+                        <p>Review year: @Html.DisplayFor(model => model.PublishDate)</p>
+                       <p>Rating: @Html.DisplayFor(model => model.NumStars) out of 5</p>
+                        <p>
+                            @Html.ActionLink("Edit Review", "Edit", new { id = Model.ID }) |
+                            @Html.ActionLink("Back to List of Reviews", "Index")
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    @* comment out the original table
+        <div>
+        <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Category.ItemName)
         </dt>
@@ -61,8 +85,5 @@
         </dd>
 
     </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</div>*@
+
