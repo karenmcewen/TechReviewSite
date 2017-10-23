@@ -161,6 +161,10 @@
     <Compile Include="Migrations\201710222150359_moreChangesToDatabaseValues.Designer.cs">
       <DependentUpon>201710222150359_moreChangesToDatabaseValues.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710232031460_fixedDate.cs" />
+    <Compile Include="Migrations\201710232031460_fixedDate.Designer.cs">
+      <DependentUpon>201710232031460_fixedDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Review.cs" />
@@ -261,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710222150359_moreChangesToDatabaseValues.resx">
       <DependentUpon>201710222150359_moreChangesToDatabaseValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710232031460_fixedDate.resx">
+      <DependentUpon>201710232031460_fixedDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,9 +20,10 @@
                         <h3>by @Html.DisplayFor(model => model.Reviewer)</h3>
                         
                         @*the ItemName isn't showing up on this page. I don't know why
-                            does there need to be a using statement?*@
+                            Does there need to be a using statement? Does it have to do with inheritance?
+                            AHA! I think it has to do with the controller, but I'm not sure how to fix it.*@
                         <p>Item: @Html.DisplayFor(model => model.Category.ItemName)</p>
-                        <p>Full Review: @Html.DisplayFor(model => model.Content)</p>
+                        <p>Review: @Html.DisplayFor(model => model.Content)</p>
                         <p>Review year: @Html.DisplayFor(model => model.PublishDate)</p>
                        <p>Rating: @Html.DisplayFor(model => model.NumStars) out of 5</p>
                         <p>

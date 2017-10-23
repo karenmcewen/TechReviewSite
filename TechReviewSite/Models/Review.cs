@@ -13,15 +13,17 @@ namespace TechReviewSite.Models
         //required - at least 5 reviews
         //stretch task - unique images for reviews
 
+        //ID is the primary key for the Review Model
         [Key]
-        public int ID { get; set; } //this is the primary key for the Review Model
+        public int ID { get; set; } 
         public string Reviewer { get; set; } //additional property - not going to create a model at this time
         public string Title { get; set; }
 
+        //Annotation StringLength sets the maximum length
         [StringLength(250)]
         public string Content { get; set; }
 
-        //using two annotations! 
+        //using two annotations - Range sets allowable range
         [DisplayName("Stars")]
         [Range(1,5)]
         public int NumStars { get; set; }
@@ -29,12 +31,14 @@ namespace TechReviewSite.Models
         //Using a ?next to DateTime allows the field to be void
         [DisplayName("Review Year")]
         [DisplayFormat(DataFormatString = "{0:yyyy}")]
-        public DateTime? PublishDate { get; set; } 
+        public DateTime? PublishDate { get; set; }
 
-       [ForeignKey("Category")]
+
+        //the CategoryID is the primary key in model Category
+        [ForeignKey("Category")]
        public int CategoryID { get; set; } 
        public Category Category {get; set;}
-        //the CategoryID is the primary key in model Category
+       
 
         
     }

@@ -56,8 +56,10 @@ namespace TechReviewSite.Migrations
                 ID = 1, Reviewer = "Captain Kirk",                
                 Title = "Beam Me Up, Scotty!",
                 Content = "Federation issued, standard communicator. Pro:Matches my shirt. Con:Liable to interstellar interference.",
-                NumStars = 4,              
+                NumStars = 4,   
+                PublishDate = new DateTime (2263,10,20),           
                 CategoryID = 1
+                
 
             },
 
@@ -68,6 +70,7 @@ namespace TechReviewSite.Migrations
                 Title = "Don't Panic!",
                 Content = "Amazing! That plaque there says its a Golgafrincham Ark Fleet Ship B Hold 7 Telephone Sanitiser Second Class.",
                 NumStars = 5,
+                PublishDate = new DateTime(1983, 10, 20),
                 CategoryID = 2
             },
 
@@ -78,6 +81,7 @@ namespace TechReviewSite.Migrations
                 Title = "Are you thinking what I'm thinking?",
                 Content = "Oh great, I have gum on the bottom of my new shoes.",
                 NumStars = 2,
+                PublishDate = new DateTime(1968, 10, 20),
                 CategoryID = 3
 
             },
@@ -89,6 +93,7 @@ namespace TechReviewSite.Migrations
                  Title = "Fantastic!",
                  Content = "What am I suupsed to do with a ringing phone? This isn't a real phone. It's not wired up to anything!",
                  NumStars = 5,
+                 PublishDate = new DateTime(1943, 10, 20),
                  CategoryID = 4
 
              },
@@ -100,6 +105,7 @@ namespace TechReviewSite.Migrations
                   Title = "I'm a doctor, not an engineer!",
                   Content = "It's dead, Jim.",
                   NumStars = 1,
+                  PublishDate = new DateTime(2264, 10, 20),
                   CategoryID = 1
 
               },
@@ -111,6 +117,7 @@ namespace TechReviewSite.Migrations
                    Title = "What do you expect me to do with that?",
                    Content = "You know, it's at times like this, when I'm trapped in a Vogon airlock with a man from Betelgeuse, and about to die of asphyxiation in deep space that I really wish I'd listened to what my mother told me when I was young.",
                    NumStars = 3,
+                   PublishDate = new DateTime(1982, 10, 20),
                    CategoryID = 2
 
                }

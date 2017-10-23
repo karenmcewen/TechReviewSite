@@ -12,13 +12,12 @@ namespace TechReviewSite.Models
         //Category includes the items to be reviewed
         //requirement - 3+ categories
 
+        //ID is the primary key for the Category Model
         [Key]
-        public int ID { get; set; } //this is the primary key for the Category Model
+        public int ID { get; set; } 
         [DisplayName("Item")]
         public string ItemName { get; set; }
 
-        //example from bridge project - may not be needed here
-        //public ICollection<Course_Student> Course_Students { get; set; }
-        //might want to be able to list all reviews for a single category?
+     
     }
 }
