@@ -47,7 +47,7 @@ namespace TechReviewSite.Migrations
             string Title
             string Content 
             int NumStars 
-            DateTime PublishDate - can't seem to get the format correct to seed this type of data
+            DateTime PublishDate - Fixed this! (needed "NEW" keyword) format correct to seed this type of data
             */
 
             context.Reviews.AddOrUpdate(x => x.ID,

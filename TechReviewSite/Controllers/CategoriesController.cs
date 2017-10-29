@@ -32,7 +32,7 @@ namespace TechReviewSite.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category);
+            return View(category.ItemName);
         }
 
         // GET: Categories/Create
